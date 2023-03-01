@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load hitcount_tags %}
+{% block title %}Iymon darslari{% endblock title %}
+
+{% block content %}
+<style>
+    #buttons {
+        text-decoration: none;
+    }
+</style>
+<div class="card" style="width: 50rem;">
+    <div class="card-header">
+        <p>{{ object.body | safe }}</p>
+    </div>
+    <br/>
+    <div class="d-grid gap-2" id="buttons">
+      <button class="btn btn-primary" type="button"><a href="{% url 'home' %}">Bosh sahifaga</button></a>
+      <button class="btn btn-primary" type="button"><a href="{% url 'iymon_list' %}">Ortga</button></a>
+  </div>
+
+</div>
+{% endblock content %}

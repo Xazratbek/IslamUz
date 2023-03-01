@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Ro'za darslari{% endblock title %}
+{% load hitcount_tags %}
+
+{% block content %}
+    <br>
+    <div style="margin-bottom: 15px;">
+        <img src="rasmlar/lessons/ruza_darslari.jpg/" alt="ruza_darslari">
+    </div>
+    {% for data in object_list %}
+        <div class="list-group">
+            <a href="{% url 'ruza_detail' data.slug %}" class="list-group-item list-group-item-action">{{ data.title }}</a>
+        </div>
+        <br>
+    {% endfor %}
+    <div class="d-grid gap-2" id="buttons">
+      <button class="btn btn-primary" type="button"><a href="{% url 'home' %}">Ortga</button></a>
+    </div>
+
+{% endblock content %}
