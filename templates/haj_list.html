@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-{% block title %}Ro'za darslari{% endblock title %}
+{% block title %}Haj darslari{% endblock title %}
 {% load hitcount_tags %}
 
 {% block content %}
     <br>
     <div style="margin-bottom: 15px;">
-        <img src="rasmlar/lessons/ruza_darslari.jpg/" alt="ruza_darslari">
+        <img src="rasmlar/lessons/haj_darslari.jpg/" alt="haj_darslari">
     </div>
     {% for data in object_list %}
         <div class="list-group">
-            <a href="{% url 'ruza_detail' data.slug %}" class="list-group-item list-group-item-action">{{ data.title }}</a>
+            <a href="{% url 'haj_detail' data.slug %}" class="list-group-item list-group-item-action">{{ data.title }}</a>
         </div>
         <br>
     {% endfor %}

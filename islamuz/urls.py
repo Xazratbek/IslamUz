@@ -9,6 +9,7 @@ urlpatterns = [
     path('zakot/',ZakotListView.as_view(), name='zakot_list'),
     path('zakot/<slug:slug>/',ZakotDetailView.as_view(), name='zakot_detail'),
     path('namoz/',NamozListView.as_view(), name='namoz_list'),
+    path('namoz/<slug:slug>/',NamozDetailView.as_view(), name='namoz_detail'),
     path('ruza/',RuzaListView.as_view(), name='ruza_list'),
     path('ruza/<slug:slug>/',RuzaDetailView.as_view(), name='ruza_detail'),
     path('haj/',HajListView.as_view(), name='haj_list'),
