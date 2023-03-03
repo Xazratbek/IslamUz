@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Namoz vaqtlari {{ object.mintaqa }}{% endblock title %}
+
+{% block content %}
+
+<div class='container media_block' style='min-height:500px; '>
+    <div class='row prayer_body' style="color: deepskyblue;">
+        <div class='row' >
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Бомдод намози</h2>  Субҳи содиқдан (чин тонг отгандан) кун чиққунчадир.
+                <p style="color: deepskyblue;">
+                    Бомдод намозини тонг ёришганда ўқиш мустаҳаб, аълороқдир. Соат бўйича ҳисобланса, бомдодни кун чиқишидан 40 дақиқача илгари ўқиш мустаҳаб вақтига мувофиқ бўлади.
+                </p>
+            </div>
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Пешин намози</h2> Қуёш заволга (оғишга) кетганидан сўнг то нарсаларнинг сояси қуёш тиккага келган пайтдаги со-ясидан ташқари ўз узунлигига нисбатан икки баравар ортгунига қадар.
+                <p style="color: deepskyblue;">Пешин намозини ёз фаслида бироз кечиктириб, қиш фаслида эса вақти кириши билан ўқиш мустаҳабдир. </p>
+            </div>
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Аср намози</h2> Ҳар бир нарсанинг сояси қуёш тиккага келган пайтдаги соясидан ташқари ўзига нисбатан икки баравар ортганидан бошлаб қуёш ботгунчадир.
+                <p style="color: deepskyblue;">Аср намозини қуёш тиғини ўзгартирмай, нурсиз ҳолатга кири-шидан олдинроқ ўқиш мустаҳабдир. </p>
+            </div>
+        </div>
+
+        <div class='row' style='margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid #eee;'>
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Шом намози</h2> Кун ботган пайтдан бошлаб кунботар томонда шафақ (қизғиш нурлар) ғойиб бўлгунчадир.
+                <p style="color: deepskyblue;">Шом намозини доимо қуёш ботиши билан ўқиш мустаҳабдир.</p>
+            </div>
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Хуфтон намози</h2> Шафақ батамом йўқолгандан кейин киради.
+                <p style="color: deepskyblue;">Хуфтон намозини кечанинг учдан бирининг охирида ўқиш афзал ва ниҳоятда аъло бўлади. </p>
+            </div>
+            <div class='col-lg-4' style="color: deepskyblue;">
+                <h2 style="color: deepskyblue;">Витр намози</h2>  Хуфтон ўқилгандан кейингина киради. Хуфтон ва витр намозларини субҳи содиққача ўқиса бўлади.
+                <p style="color: deepskyblue;">Витр намозини тун охирида уйғонишга қодир бўлган кишилар субҳ олдидан ўқисалар, мустаҳаб амал қилган бўлишади. </p>
+            </div>
+            <div style="color: deepskyblue;">
+                <h5>Mintaqa: {{ object.mintaqa | title }}. Bomdod: {{ object.bomdod }}⌚️ Quyosh: {{ object.quyosh }}⌚️ Peshin: {{ object.peshin }}⌚️ Asr: {{ object.asr }}⌚️ Shom: {{  object.shom}}⌚️ Xufton: {{ object.xufton }}⌚️</h5>
+            </div>
+            <div class="d-grid gap-2" id="buttons">
+                <button class="btn btn-primary" type="button"><a href="{% url 'namoz_vaqtlari_list' %}" style="text-decoration: none;">Ortga</button></a>
+                <button class="btn btn-primary" type="button"><a href="{% url 'home' %}" style="text-decoration: none;">Bosh sahifaga</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock content %}

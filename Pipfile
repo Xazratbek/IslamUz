@@ -14,6 +14,7 @@ django-ckeditor = "*"
 requests = "*"
 lxml = "*"
 django-hitcount = "*"
+bs4 = "*"
 
 [dev-packages]
 

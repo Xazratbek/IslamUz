@@ -54,6 +54,9 @@ INSTALLED_APPS = [
 
     #my apps
     'islamuz',
+    'islomiy_qomus',
+    'kutubxona',
+    'namoz_vaqtlari',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -171,3 +174,5 @@ CKEDITOR_CONFIGS = {
 }
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_USER = True
+
+TIME_INPUT_FORMATS: ['%H:%M']

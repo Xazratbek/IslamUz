@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 from lxml import html
 from .models import Iymon, Zakot ,Namoz, Ruza, Haj
-from django.views.generic import DetailView,ListView
+from django.views.generic import ListView
 from hitcount.views import HitCountDetailView
 
 def islamic_date_time(request):
