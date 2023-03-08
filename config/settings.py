@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'islomiy_qomus',
     'kutubxona',
     'namoz_vaqtlari',
+    'quroni_karim',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -146,8 +147,8 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_STORAGE ='django.contrib.staticfiles.storage.StaticFilesStorage'
 
-MEDIA_URL = '/rasmlar/'
-MEDIA_ROOT = str(BASE_DIR.joinpath('rasmlar'))
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

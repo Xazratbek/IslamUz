@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Qur'oni karim{% endblock title %}
+{% block content %}
+<div class="view_s" onclick="readS();"></div>
+<div class='container media_block' style='min-height:500px; padding-bottom:500px;'>
+    <div class='row'>
+        <div class='col-3 media_menu' style='padding-right:0px;'>
+            <div id="navbarNavAltMarkup" class="media_menu_iymon">
+                <div class="navbar-nav" id="navbar" style='width:260px; '>
+                    {% for data in object_list %}
+                    <a class="nav-item nav-link islom_link" style='background: deepskyblue; color: #fff;' href="{% url 'suralar_detail' data.id %}">
+                        <span class='p_menu'>{{ data.id }}. {{ data.name }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>                     
+</div>
+</div>
+{% endblock content %}

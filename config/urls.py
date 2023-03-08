@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('islamuz.urls')),
     path('',include('namoz_vaqtlari.urls')),
+    path('',include('quroni_karim.urls')),
 ]
 
 if settings.DEBUG:

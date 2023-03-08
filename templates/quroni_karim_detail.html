@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Qur'oni karim{% endblock title %}
+{% block content %}
+
+    {% for oyat in object_list %}
+        {% for m_obj in oyat.many_set.all %}
+            <p>{{ oyat.sura.name }}</p>
+
+            <p> {{ oyat.id }}.{{ oyat.uzbek_text }}</p>
+            <audio class="listen" preload="none" src="{{ oyat.audio_file.url }}" controls></audio>
+        {% endfor %}
+    {% endfor %}
+{% comment %} <div class="view_s" onclick="readS();"></div>
+        {% for oyat in object_list %}
+        <p>{{ oyat.uzbek_text }}</p>
+        <div class='row quran_oyat' id="{{ oyat.id }}" onmousemove="showInfo({{ oyat.id }})" onmouseout="hideInfo({{ oyat.id }})">
+            <div class='col-1' style='padding-left:0px; padding-top:10px; padding-bottom:10px;'>
+                <div style='border-right:1px solid #f7f7f7; display:none;' class='block_so2'>
+                    <div class="mediPlayer" style='position:absolute; height:45px; margin-top:20px;'>
+                        <audio class="listen" preload="none" src="{{ oyat.audio_file.url }}" controls></audio>
+                    </div>
+                    <div class='copy_oyat' id='copy_oyat{{ oyat.id }}' data-clipboard-text='{{oyat.arabic_text}}
+                        {{ oyat.id }}.{{ oyat.uzbek_text }}' onclick='copyOyat({{ oyat.id }});'>
+                        <span class="glyphicon glyphicon-paperclip"></span>
+                        <span class='copyoyat{{ oyat.id }}' data-toggle="tooltip" data-placement="bottom" title="Кўчириб олиб, керакли жойга (CTRL+V) олқали қўйинг">Кўчириш</span>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %} {% endcomment %}
+<!-- <div class='container media_block' style='min-height:500px; padding-bottom:500px;'>
+    <div class='row'>
+        <div class='col-3 media_menu' style='padding-right:0px;'>
+            <div id="navbarNavAltMarkup" class="media_menu_iymon">
+                <div class="navbar-nav" id="navbar" style='width:260px; '>
+                    {% for data in object_list %}
+                    <a class="nav-item nav-link islom_link" style='background: deepskyblue; color: #fff;' href="{% url 'suralar_detail' data.pk %}">
+                        <span class='p_menu'>{{ data.sura.id }}.{{ data.sura.name }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+</div>
+</div> -->
+{% endblock content %}

@@ -16,9 +16,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
 
-    except KeyboardInterrupt:
-        return "Dastur to'xtadi"
-
     execute_from_command_line(sys.argv)
 if __name__ == '__main__':
     main()
